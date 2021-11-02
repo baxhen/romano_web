@@ -48,6 +48,7 @@ export const Header: React.FC<Props> = () => {
             </IconButton>
             <HeaderDrawer open={open} onClose={toggleDrawer} />
           </Hidden>
+
           <Box sx={{ cursor: 'pointer' }}>
             <Image
               src="/static/main-logo.png"
@@ -58,19 +59,25 @@ export const Header: React.FC<Props> = () => {
             />
           </Box>
 
-          <Box width="70%" margin="0 auto 0 auto" display="flex">
-            {[
-              { text: 'Sobre', url: '/about' },
-              { text: 'Equipes', url: '/teams' },
-              {
-                text: 'Patrocinadores',
-                url: '/sponsors',
-              },
-              { text: 'Fotos', url: '/photos' },
-            ].map(({ text, url }, i) => (
-              <_NavLink key={i} text={text} onClick={() => history.push(url)} />
-            ))}
-          </Box>
+          <Hidden hidden={downMD}>
+            <Box width="70%" margin="0 auto 0 auto" display="flex">
+              {[
+                { text: 'Sobre', url: '/about' },
+                { text: 'Equipes', url: '/teams' },
+                {
+                  text: 'Patrocinadores',
+                  url: '/sponsors',
+                },
+                { text: 'Fotos', url: '/photos' },
+              ].map(({ text, url }, i) => (
+                <_NavLink
+                  key={i}
+                  text={text}
+                  onClick={() => history.push(url)}
+                />
+              ))}
+            </Box>
+          </Hidden>
         </Toolbar>
       </AppBar>
     </Box>
