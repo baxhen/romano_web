@@ -68,7 +68,7 @@ export const Header: React.FC<Props> = () => {
                   text: 'Patrocinadores',
                   url: '/sponsors',
                 },
-                { text: 'Fotos', url: '/photos' },
+                { text: 'Fotos', url: '/gallery' },
               ].map(({ text, url }, i) => (
                 <_NavLink
                   key={i}

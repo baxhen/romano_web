@@ -3,7 +3,7 @@ import theme from '../../src/theme';
 const styles = {
   root: {
     cursor: 'pointer',
-    '&:hover, &:focus': {
+    '&:hover': {
       color: theme.palette.secondary.light,
     },
   },

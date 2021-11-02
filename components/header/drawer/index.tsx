@@ -26,7 +26,7 @@ export const HeaderDrawer: React.FC<Props> = ({ open, onClose }) => {
           { text: 'Sobre', url: '/about', Icon: InfoIcon },
           { text: 'Equipes', url: '/teams', Icon: GroupsIcon },
           { text: 'Patrocinadores', url: '/sponsors', Icon: CorporateFareIcon },
-          { text: 'Fotos', url: '/photos', Icon: CollectionsIcon },
+          { text: 'Fotos', url: '/gallery', Icon: CollectionsIcon },
         ].map(({ text, url, Icon }) => (
           <ListItem button key={text}>
             <ListItemIcon onClick={() => history.push(url)}>
