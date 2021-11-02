@@ -7,6 +7,7 @@ import { CssBaseline } from '@mui/material';
 
 import Header from '../components/header';
 import theme from '../src/theme';
+import Footer from '../components/footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <CssBaseline />
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );
