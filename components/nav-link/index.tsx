@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import styles from './styles';
 import { MaterialStyle } from '../../utils/types';
 
-interface Props extends MaterialStyle<ReturnType<typeof styles>> {
+interface Props extends MaterialStyle<typeof styles> {
   text: string;
   onClick?: React.MouseEventHandler<HTMLAnchorElement> | undefined;
 }
