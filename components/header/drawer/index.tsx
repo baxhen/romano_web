@@ -29,12 +29,12 @@ export const HeaderDrawer: React.FC<Props> = ({ open, onClose }) => {
           { text: 'Fotos', url: '/gallery', Icon: CollectionsIcon },
         ].map(({ text, url, Icon }) => (
           <ListItem button key={text}>
-            <ListItemIcon
-              onClick={() => {
-                history.push(url);
-                onClose();
-              }}
-            >
+            onClick=
+            {() => {
+              history.push(url);
+              onClose();
+            }}
+            <ListItemIcon>
               <Icon />
             </ListItemIcon>
             <ListItemText primary={text} />
