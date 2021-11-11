@@ -1,9 +1,9 @@
-import theme from '../../src/theme';
+import theme from "../../src/theme";
 
 const styles = {
   root: {
-    cursor: 'pointer',
-    '&:hover': {
+    cursor: "pointer",
+    "&:hover": {
       color: theme.palette.secondary.light,
     },
   },

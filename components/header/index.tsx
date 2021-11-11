@@ -1,20 +1,20 @@
-import React from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useTheme } from '@mui/material';
-import { useMediaQuery } from '@mui/material';
+import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useTheme } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
 
-import HeaderDrawer from './drawer';
-import Hidden from '../hidden';
-import _NavLink from '../nav-link';
+import HeaderDrawer from "./drawer";
+import Hidden from "../hidden";
+import _NavLink from "../nav-link";
 
 interface Props {}
 
@@ -22,7 +22,7 @@ export const Header: React.FC<Props> = () => {
   const history = useRouter();
 
   const theme = useTheme();
-  const downMD = useMediaQuery(theme.breakpoints.down('md'));
+  const downMD = useMediaQuery(theme.breakpoints.down("md"));
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = () => {
@@ -31,44 +31,51 @@ export const Header: React.FC<Props> = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
-        sx={{ height: '22vh', display: 'flex', justifyContent: 'center' }}
+        position="absolute"
+        elevation={0}
+        sx={{
+          height: "22vh",
+          display: "flex",
+          justifyContent: "center",
+          backgroundColor: "transparent",
+          padding: "0 5rem",
+        }}
       >
-        <Toolbar sx={{ display: 'flex' }}>
+        <Toolbar sx={{ display: "flex", justifyContent: "center" }}>
           <Hidden hidden={!downMD}>
             <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 'auto' }}
+              sx={{ mr: "auto" }}
               onClick={toggleDrawer}
             >
-              <MenuIcon sx={{ fontSize: '55px' }} />
+              <MenuIcon sx={{ fontSize: "55px" }} />
             </IconButton>
             <HeaderDrawer open={open} onClose={toggleDrawer} />
           </Hidden>
 
-          <Box sx={{ cursor: 'pointer' }}>
+          <Box sx={{ cursor: "pointer" }}>
             <Image
               src="/static/main-logo.png"
               alt="main logo"
               height="60"
               width="120"
-              onClick={() => history.push('/')}
+              onClick={() => history.push("/")}
             />
           </Box>
 
           <Hidden hidden={downMD}>
             <Box width="70%" margin="0 auto 0 auto" display="flex">
               {[
-                { text: 'Sobre', url: '/about' },
-                { text: 'Equipes', url: '/teams' },
+                { text: "Sobre", url: "/about" },
+                { text: "Equipes", url: "/teams" },
                 {
-                  text: 'Patrocinadores',
-                  url: '/sponsors',
+                  text: "Patrocinadores",
+                  url: "/sponsors",
                 },
-                { text: 'Fotos', url: '/gallery' },
+                { text: "Fotos", url: "/gallery" },
               ].map(({ text, url }, i) => (
                 <_NavLink
                   key={i}

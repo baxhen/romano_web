@@ -140,6 +140,7 @@ export const Footer: React.FC<Props> = () => {
               alt="footer logo"
               height="180"
               width="360"
+              layout="responsive"
             />
           </Grid>
           <Hidden hidden={!downMD}>

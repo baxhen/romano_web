@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
 
 interface Props {}
 
 const About: React.FC<Props> = () => {
-  return <div>Sobre</div>;
+  return (
+    <>
+      <div style={{ height: "22vh" }} />
+      <div>Sobre</div>
+    </>
+  );
 };
 
 export default About;
