@@ -2,8 +2,7 @@ import theme from "../../src/theme";
 const styles: any = {
   root: {
     width: "75rem",
-    height: "30rem",
-    position: "relative",
+    height: "auto",
     [theme.breakpoints.down("sm")]: {
       width: "20rem",
     },

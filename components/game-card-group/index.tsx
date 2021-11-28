@@ -13,7 +13,9 @@ export default function GameCardGroups({ games }: Props) {
     <Card
       sx={{
         width: "75rem",
-        height: "26rem",
+        // height: "30rem",
+        paddingTop: "2rem",
+        paddingBottom: "2rem",
         bgcolor: theme.palette.secondary.main,
       }}
     >
