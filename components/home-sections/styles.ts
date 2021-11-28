@@ -3,6 +3,7 @@ const styles: any = {
   root: {
     width: "75rem",
     height: "auto",
+    position: "relative",
     [theme.breakpoints.down("sm")]: {
       width: "20rem",
     },
