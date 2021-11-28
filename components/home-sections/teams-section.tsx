@@ -77,7 +77,13 @@ const _TeamsSection = ({ classes }: Props) => {
           </Typography>
         </Grid>
 
-        <Grid item>
+        <Grid
+          item
+          alignItems="center"
+          justifyContent="center"
+          height="60vh"
+          width="90vw"
+        >
           <Carousel
             className={classes.root}
             cycleNavigation
