@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true,
-}
+
+const withTM = require("next-transpile-modules")([
+  "react-material-ui-carousel",
+]);
+
+module.exports = withTM({ reactStrictMode: true });
+// module.exports = {
+
+// };

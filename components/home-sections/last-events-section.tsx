@@ -5,15 +5,12 @@ import HeaderSpacing from "../header-spacing";
 import Hidden from "../hidden";
 
 interface Props {}
-interface IEventApi extends IEvent {
-  id: number;
-}
 
 const LastEventsSection = (props: Props) => {
   const theme = useTheme();
   const downSM = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const events: IEventApi[] = [
+  const events: IEvent[] = [
     {
       id: 1,
       title: "LOL Arcane Challenge",

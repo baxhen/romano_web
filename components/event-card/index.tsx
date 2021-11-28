@@ -11,7 +11,7 @@ export interface IEvent {
   id: number;
 }
 
-export default function EventCards({ title, description, url, id }: IEvent) {
+export default function EventCard({ title, description, url, id }: IEvent) {
   return (
     <Card sx={{ maxWidth: "20rem" }}>
       <CardActionArea onClick={() => console.log("evento de id", id)}>
