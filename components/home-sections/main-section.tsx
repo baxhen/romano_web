@@ -8,6 +8,7 @@ import {
 
 import HeaderSpacing from "../header-spacing";
 import Hidden from "../hidden";
+import styles from "../../styles/Home.module.css";
 
 interface Props {}
 
@@ -15,7 +16,7 @@ const MainSection = (props: Props) => {
   const theme = useTheme();
   const downSM = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <div>
+    <div className={styles.container}>
       <Hidden hidden={downSM}>
         <HeaderSpacing />
         <Box height="100vh" width="100vw" display="flex" pl="4.5rem" pt="20vh">
