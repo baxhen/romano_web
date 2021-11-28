@@ -81,7 +81,7 @@ const _TeamsSection = ({ classes }: Props) => {
           item
           alignItems="center"
           justifyContent="center"
-          height="60vh"
+          // height="60vh"
           width="90vw"
         >
           <Carousel
