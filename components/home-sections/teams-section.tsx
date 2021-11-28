@@ -53,7 +53,7 @@ const _TeamsSection = ({ classes }: Props) => {
   const chunkedGames = chunk(games, 3);
 
   return (
-    <Box height="max-content">
+    <Box height="80vh">
       <Grid
         container
         alignItems="center"
