@@ -38,7 +38,7 @@ export const Header: React.FC<Props> = () => {
           display: "flex",
           justifyContent: "center",
           backgroundColor: "transparent",
-          padding: "0 5rem 0 10rem",
+          padding: !downMD ? "0 5rem 0 5rem" : undefined,
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "center" }}>
