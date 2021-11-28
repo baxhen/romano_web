@@ -1,6 +1,5 @@
 import theme from "../../src/theme";
-
-const styles = {
+const styles: any = {
   root: {
     width: "75rem",
     height: "30rem",
