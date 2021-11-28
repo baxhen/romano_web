@@ -77,21 +77,23 @@ const _TeamsSection = ({ classes }: Props) => {
           </Typography>
         </Grid>
 
-        <Carousel
-          className={classes.root}
-          cycleNavigation
-          animation="slide"
-          autoPlay
-          stopAutoPlayOnHover
-          duration={1000}
-          interval={7000}
-        >
-          {(!downSM &&
-            chunkedGames.map((chunkedGame, i) => (
-              <GameCardGroups games={chunkedGame} key={i} />
-            ))) ||
-            games.map((game) => <GameCard {...game} key={game.id} />)}
-        </Carousel>
+        <Grid item xs>
+          <Carousel
+            className={classes.root}
+            cycleNavigation
+            animation="slide"
+            autoPlay
+            stopAutoPlayOnHover
+            duration={1000}
+            interval={7000}
+          >
+            {(!downSM &&
+              chunkedGames.map((chunkedGame, i) => (
+                <GameCardGroups games={chunkedGame} key={i} />
+              ))) ||
+              games.map((game) => <GameCard {...game} key={game.id} />)}
+          </Carousel>
+        </Grid>
       </Grid>
     </Box>
   );
