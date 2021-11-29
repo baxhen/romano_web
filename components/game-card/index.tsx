@@ -15,9 +15,7 @@ export default function GameCard({ title, url, id }: IGame) {
   return (
     <Card
       sx={{
-        width: "100%",
-        paddingTop: "2rem",
-        paddingBottom: "2rem",
+        width: "20rem",
         bgcolor: theme.palette.primary.main,
       }}
     >
