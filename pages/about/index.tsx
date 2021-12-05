@@ -205,8 +205,8 @@ const About: React.FC<Props> = () => {
             sx={{ ml: `-${theme.spacing(5)}` }}
             justifyContent="center"
           >
-            {staffConfig.map((config) => (
-              <Grid item key={config.id}>
+            {staffConfig.map((config, i) => (
+              <Grid item key={config.id + i}>
                 <StaffCard {...config} />
               </Grid>
             ))}

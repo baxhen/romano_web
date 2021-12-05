@@ -65,7 +65,7 @@ const StaffCard: React.FC<IStaff> = ({
         </div>
         <Grid container sx={{ ml: "-.7rem" }}>
           {socials.map((s, i) => (
-            <Grid item xs>
+            <Grid item xs key={s.url + i}>
               <IconButton
                 onClick={() => {
                   window.open(s.url, "__blank");
