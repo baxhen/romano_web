@@ -134,7 +134,7 @@ export const Footer: React.FC<Props> = () => {
     >
       <Grid container spacing={4} alignItems="center" direction="column">
         <Grid item container spacing={4} direction={downMD ? "column" : "row"}>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
             <Image
               src="/static/main-logo.png"
               alt="footer logo"

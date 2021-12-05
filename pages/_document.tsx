@@ -3,6 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
+import ServerStyleSheets from "@mui/styles/ServerStyleSheets";
 
 export default class MyDocument extends Document {
   render() {
@@ -50,6 +51,8 @@ MyDocument.getInitialProps = async (ctx) => {
   // 3. app.render
   // 4. page.render
 
+  const sheets = new ServerStyleSheets();
+
   const originalRenderPage = ctx.renderPage;
 
   // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
@@ -61,7 +64,7 @@ MyDocument.getInitialProps = async (ctx) => {
     originalRenderPage({
       // eslint-disable-next-line react/display-name
       enhanceApp: (App: any) => (props) =>
-        <App emotionCache={cache} {...props} />,
+        sheets.collect(<App emotionCache={cache} {...props} />),
     });
 
   const initialProps = await Document.getInitialProps(ctx);
@@ -83,6 +86,7 @@ MyDocument.getInitialProps = async (ctx) => {
     styles: [
       ...React.Children.toArray(initialProps.styles),
       ...emotionStyleTags,
+      sheets.getStyleElement(),
     ],
   };
 };
