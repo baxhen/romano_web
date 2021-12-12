@@ -1,22 +1,6 @@
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 import useStyles from "./styles";
-import { Button, IconButton } from "@mui/material";
-import theme from "../../src/theme";
-
-export type SocialTypes = {
-  linkedin: "linkedin";
-  facebook: "facebook";
-  instagram: "instagram";
-  twitter: "twitter";
-};
+import { Button } from "@mui/material";
 
 export interface ISponsorCard {
   id: number;
